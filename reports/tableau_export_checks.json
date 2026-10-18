@@ -1,0 +1,26 @@
+{
+  "exported_at_utc": "2026-10-18T13:17:39.849195+00:00",
+  "file": "data/processed/tableau_merchandise.csv",
+  "sha256": "0cdfe201ba317c14f634ad5326e336a29b0216b226c21b7b79af49eaa984c55b",
+  "rows": 536465,
+  "grain": "one eligible source merchandise invoice line; source_row retained",
+  "coverage": [
+    "2010-12-01 08:26:00",
+    "2011-12-09 12:50:00"
+  ],
+  "partial_month": "December 2011; extract ends 9 December",
+  "baseline": {
+    "positive_value": 10271433.06,
+    "credit_value": 478724.18,
+    "net_recorded_value": 9792708.88
+  },
+  "checks": {
+    "sql_python_product_country_values_and_invoices": "pass",
+    "sql_python_monthly_values_and_invoices": "pass",
+    "source_row_identity": "pass",
+    "csv_identifier_and_value_round_trip": "pass",
+    "four_candidate_pair_lines": "pass"
+  },
+  "product_label": "StockCode plus most frequent description on positive lines; lexical tie-break; first observed description fallback for codes with credits only. Label is not independently verified.",
+  "scope": "Merchandise only. Non-merchandise, zero-price and bad-debt records remain in the raw data and audit, outside this dashboard extract."
+}

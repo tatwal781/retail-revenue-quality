@@ -1,0 +1,10 @@
+data/raw/*
+data/processed/*
+data/*.sqlite*
+data/*.db
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+.env
+.env.*
